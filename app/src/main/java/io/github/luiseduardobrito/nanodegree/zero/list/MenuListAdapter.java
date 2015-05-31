@@ -14,14 +14,26 @@ import io.github.luiseduardobrito.nanodegree.zero.myapplication.R;
  */
 public class MenuListAdapter extends BaseAdapter {
 
-    Integer min = 0;
+    /**
+     * The Urls.
+     */
+    String[] urls;
 
-    String[] url;
-
+    /**
+     * The Labels.
+     */
     String[] labels;
 
+    /**
+     * The Context.
+     */
     Context context;
 
+    /**
+     * Instantiates a new Menu list adapter.
+     *
+     * @param context the context
+     */
     public MenuListAdapter(Context context) {
 
         this.context = context;
@@ -30,7 +42,7 @@ public class MenuListAdapter extends BaseAdapter {
                 .getResources()
                 .getStringArray(R.array.menu_items);
 
-        this.url = context
+        this.urls = context
                 .getResources()
                 .getStringArray(R.array.menu_items_url);
 
@@ -38,7 +50,7 @@ public class MenuListAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return Math.min(labels.length, url.length);
+        return Math.min(labels.length, urls.length);
     }
 
     @Override
@@ -62,7 +74,7 @@ public class MenuListAdapter extends BaseAdapter {
             menuListItem = new MenuListItem(context);
         }
 
-        menuListItem.bind(labels[i], url[i]);
+        menuListItem.bind(labels[i], urls[i]);
         return menuListItem;
     }
 }

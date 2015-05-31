@@ -11,11 +11,19 @@ import io.github.luiseduardobrito.nanodegree.zero.myapplication.R;
 
 /**
  * The main activity of the application.
+ *
+ * Created by luiseduardobrito on 5/30/15.
  */
 public class MainActivity extends ActionBarActivity {
 
+    /**
+     * The List.
+     */
     ListView mList;
 
+    /**
+     * The Adapter.
+     */
     MenuListAdapter adapter;
 
     @Override
@@ -32,6 +40,7 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
@@ -39,6 +48,7 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.

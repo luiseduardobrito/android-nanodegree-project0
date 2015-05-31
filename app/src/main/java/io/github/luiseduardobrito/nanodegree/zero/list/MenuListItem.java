@@ -18,23 +18,55 @@ import io.github.luiseduardobrito.nanodegree.zero.myapplication.R;
  */
 public class MenuListItem extends Button {
 
+    /**
+     * Instantiates a new Menu list item.
+     *
+     * @param context the context
+     */
     public MenuListItem(Context context) {
         super(context);
     }
 
+    /**
+     * Instantiates a new Menu list item.
+     *
+     * @param context the context
+     * @param attrs the attrs
+     */
     public MenuListItem(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
+    /**
+     * Instantiates a new Menu list item.
+     *
+     * @param context the context
+     * @param attrs the attrs
+     * @param defStyleAttr the def style attr
+     */
     public MenuListItem(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
+    /**
+     * Instantiates a new Menu list item.
+     *
+     * @param context the context
+     * @param attrs the attrs
+     * @param defStyleAttr the def style attr
+     * @param defStyleRes the def style res
+     */
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public MenuListItem(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
+    /**
+     * Bind the button to a label and an url.
+     *
+     * @param label the label
+     * @param url the url
+     */
     public void bind(final String label, final String url) {
 
         this.setText(label);
