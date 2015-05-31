@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Luís Brito</string>
+
+    <string name="hello_world">My app portifolio!</string>
+    <string name="action_settings">About</string>
+    <string name="soon">Coming soon...</string>
+</resources>
