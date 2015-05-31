@@ -1,7 +1,9 @@
 android-nanodegree-project0
 ===========================
 
-Android Nanodegree - Udacity
+Project Zero - Android Nanodegree
+
+**Author**: Luís Eduardo Brito <luiseduardobrito.github.io>
 
 ## License
 

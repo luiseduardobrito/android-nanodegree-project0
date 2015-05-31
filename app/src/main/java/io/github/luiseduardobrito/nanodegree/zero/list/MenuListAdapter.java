@@ -1,3 +1,6 @@
+/**
+ * Copyright (C) 2015 - Luis Eduardo Brito
+ */
 package io.github.luiseduardobrito.nanodegree.zero.list;
 
 import android.content.Context;

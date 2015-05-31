@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (C) 2015 - Luis Eduardo Brito -->
 <resources>
     <string-array name="menu_items">
         <item>Project Zero</item>
