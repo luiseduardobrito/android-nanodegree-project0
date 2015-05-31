@@ -32,11 +32,14 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        // Inflate activity state and layout
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Initialize enu list adapter
         adapter = new MenuListAdapter(this);
 
+        // Initialize list view for menu
         mList = (ListView) findViewById(R.id.list);
         mList.setAdapter(adapter);
     }

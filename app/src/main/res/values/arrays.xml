@@ -3,12 +3,16 @@
 <!-- Copyright (C) 2015 - Luis Eduardo Brito -->
 <resources>
     <string-array name="menu_items">
-        <item>Project Zero</item>
-        <item>Project One</item>
-        <item>Project Two</item>
-        <item>Project Three</item>
+        <item>Spotify Streamer</item>
+        <item>Scores App</item>
+        <item>Library App</item>
+        <item>Build It Bigger</item>
+        <item>XYZ Reader</item>
+        <item>Capstone: My own app</item>
     </string-array>
     <string-array name="menu_items_url">
+        <item></item>
+        <item></item>
         <item></item>
         <item></item>
         <item></item>
