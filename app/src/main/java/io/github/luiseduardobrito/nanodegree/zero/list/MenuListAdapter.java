@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import io.github.luiseduardobrito.nanodegree.zero.myapplication.R;
+import io.github.luiseduardobrito.nanodegree.zero.R;
 
 /**
  * The main menu list adapter.

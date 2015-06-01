@@ -4,20 +4,20 @@
 package io.github.luiseduardobrito.nanodegree.zero;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
 import io.github.luiseduardobrito.nanodegree.zero.list.MenuListAdapter;
-import io.github.luiseduardobrito.nanodegree.zero.myapplication.R;
 
 /**
  * The main activity of the application.
- *
+ * <p/>
  * Created by luiseduardobrito on 5/30/15.
  */
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity {
 
     /**
      * The List.
@@ -27,7 +27,9 @@ public class MainActivity extends ActionBarActivity {
     /**
      * The Adapter.
      */
-    MenuListAdapter adapter;
+    MenuListAdapter mAdapter;
+
+    Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,12 +38,16 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize enu list adapter
-        adapter = new MenuListAdapter(this);
+        // Set support toolbar instance
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+
+        // Initialize enu list mAdapter
+        mAdapter = new MenuListAdapter(this);
 
         // Initialize list view for menu
         mList = (ListView) findViewById(R.id.list);
-        mList.setAdapter(adapter);
+        mList.setAdapter(mAdapter);
     }
 
     @Override

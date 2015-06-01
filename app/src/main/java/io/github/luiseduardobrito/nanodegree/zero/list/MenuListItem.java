@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import io.github.luiseduardobrito.nanodegree.zero.myapplication.R;
+import io.github.luiseduardobrito.nanodegree.zero.R;
 
 /**
  * The button item in the main menu.

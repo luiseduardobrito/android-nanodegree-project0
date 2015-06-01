@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Copyright (C) 2015 - Luis Eduardo Brito -->
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:colorPrimary">@color/primary</item>
+        <item name="android:colorPrimaryDark">@color/primary_dark</item>
+        <item name="android:colorAccent">@color/accent</item>
+    </style>
+
+    <!-- Application Toolbar Style -->
+    <style name="AppTheme.Toolbar" parent="ThemeOverlay.AppCompat.ActionBar">
+
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="android:background">?android:attr/colorPrimary</item>
+        <item name="colorControlNormal">@color/text</item>
+        <item name="colorControlHighlight">@color/primary_light</item>
+
+        <!-- Toolbar text colors -->
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorSecondary">@color/secondary_text</item>
+        <item name="actionMenuTextColor">@color/text</item>
+
+        <!-- Toolbar min height -->
+        <item name="android:minHeight">@dimen/toolbar_height</item>
+
+        <!-- Toolbar contents gravity -->
+        <item name="android:gravity">center_vertical</item>
+
+    </style>
+
+</resources>
