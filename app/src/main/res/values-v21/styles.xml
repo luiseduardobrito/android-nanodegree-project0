@@ -16,16 +16,24 @@
 
         <!-- Customize color of navigation drawer icon and back arrow -->
         <item name="android:background">?android:attr/colorPrimary</item>
-        <item name="colorControlNormal">@color/text</item>
-        <item name="colorControlHighlight">@color/primary_light</item>
+        <item name="android:colorControlNormal">@color/text</item>
+        <item name="android:colorControlHighlight">@color/primary_light</item>
+
+        <!-- Toolbar min height -->
+        <item name="android:minHeight">@dimen/toolbar_height</item>
 
         <!-- Toolbar text colors -->
         <item name="android:textColorPrimary">@color/text</item>
         <item name="android:textColorSecondary">@color/secondary_text</item>
-        <item name="actionMenuTextColor">@color/text</item>
+        <item name="android:actionMenuTextColor">@color/text</item>
 
-        <!-- Toolbar min height -->
-        <item name="android:minHeight">@dimen/toolbar_height</item>
+        <!-- Toolbar popup style -->
+        <item name="popupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarPopupTheme">@style/Theme.AppCompat.Light</item>
+        <item name="actionBarWidgetTheme">@style/Theme.AppCompat.Light</item>
+        <item name="android:popupTheme">@android:style/Theme.Material.Light</item>
+        <item name="android:actionBarPopupTheme">@android:style/Theme.Material.Light</item>
+        <item name="android:actionBarWidgetTheme">@android:style/Theme.Material.Light</item>
 
         <!-- Toolbar contents gravity -->
         <item name="android:gravity">center_vertical</item>

@@ -1,62 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <!-- Copyright (C) 2015 - Luis Eduardo Brito -->
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:minHeight="@dimen/toolbar_height_action">
 
-    <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="@dimen/toolbar_height_action">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
         <include
             android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- A CardView that contains a TextView -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_view"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            layout="@layout/toolbar"/>
-
-        <com.gc.materialdesign.views.ButtonFloat
-            android:id="@+id/buttonFloat"
-            xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|right"
-            android:background="@color/accent"
-            android:layout_marginRight="24dp"
-            materialdesign:animate="true"
-            materialdesign:iconDrawable="@drawable/ic_code_white"/>
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardElevation="4dp">
 
 
-    </FrameLayout>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="@string/hello_world"/>
 
-    <!-- A CardView that contains a TextView -->
-    <android.support.v7.widget.CardView
-        android:id="@+id/card_view"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="12dp"
-        card_view:cardCornerRadius="4dp"
-        card_view:cardElevation="4dp">
+        </android.support.v7.widget.CardView>
 
-
-        <TextView
+        <ListView
+            android:id="@+id/list"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:padding="12dp"
-            android:text="@string/hello_world"/>
+            android:layout_height="fill_parent"
+            android:divider="@android:color/transparent"/>
 
-    </android.support.v7.widget.CardView>
+    </LinearLayout>
 
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"/>
+    <com.gc.materialdesign.views.ButtonFloat
+        android:id="@+id/button_float"
+        android:layout_width="@dimen/action_github"
+        android:layout_height="@dimen/action_github"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/action_github_margin"
+        android:layout_marginRight="@dimen/action_github_margin"
+        android:background="@color/accent"
+        android:gravity="center"
+        materialdesign:animate="true"
+        materialdesign:iconDrawable="@drawable/ic_code_white"/>
 
-</LinearLayout>
+</FrameLayout>
