@@ -16,10 +16,18 @@ import io.github.luiseduardobrito.nanodegree.zero.R;
 
 /**
  * The button item in the main menu.
- *
+ * <p/>
  * Created by luiseduardobrito on 5/31/15.
  */
 public class MenuListItem extends Button {
+
+    /**
+     * The toast instance.
+     * <p/>
+     * Static prevents stacking too much toasts instances,
+     * which seems like a single instance with long duration.
+     */
+    private static Toast sToast;
 
     /**
      * Instantiates a new Menu list item.
@@ -34,7 +42,7 @@ public class MenuListItem extends Button {
      * Instantiates a new Menu list item.
      *
      * @param context the context
-     * @param attrs the attrs
+     * @param attrs   the attrs
      */
     public MenuListItem(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -43,8 +51,8 @@ public class MenuListItem extends Button {
     /**
      * Instantiates a new Menu list item.
      *
-     * @param context the context
-     * @param attrs the attrs
+     * @param context      the context
+     * @param attrs        the attrs
      * @param defStyleAttr the def style attr
      */
     public MenuListItem(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -54,10 +62,10 @@ public class MenuListItem extends Button {
     /**
      * Instantiates a new Menu list item.
      *
-     * @param context the context
-     * @param attrs the attrs
+     * @param context      the context
+     * @param attrs        the attrs
      * @param defStyleAttr the def style attr
-     * @param defStyleRes the def style res
+     * @param defStyleRes  the def style res
      */
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public MenuListItem(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
@@ -68,7 +76,7 @@ public class MenuListItem extends Button {
      * Bind the button to a label and an url.
      *
      * @param label the label
-     * @param url the url
+     * @param url   the url
      */
     public void bind(final String label, final String url) {
 
@@ -87,7 +95,8 @@ public class MenuListItem extends Button {
 
                 } else {
 
-                    Toast.makeText(getContext(), R.string.soon, Toast.LENGTH_SHORT).show();
+                    sToast = Toast.makeText(getContext(), R.string.soon, Toast.LENGTH_SHORT);
+                    sToast.show();
 
                 }
             }
